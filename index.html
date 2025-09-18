@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YASA TASKER</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Pi SDK -->
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <script>
+    // Initialize Pi SDK (production mode)
+    Pi.init({ version: "2.0", sandbox: false });
+  </script>
+</head>
+<body>
+<div class="container">
+  <h1>Welcome to YASA TASKER</h1>
+
+  <!-- Login button -->
+  <button id="loginButton">Login with Pi</button>
+
+  <!-- Pay with Pi button -->
+  <button id="payButton">Pay with pi</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

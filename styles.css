@@ -1,0 +1,47 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for content */
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border: 2px solid #1a237e; /* dark blue border */
+}
+
+/* Title */
+h1 {
+  color: #1a237e; /* dark blue */
+  margin-bottom: 20px;
+}
+
+/* Login button */
+button {
+  background-color: #f4c542; /* gold/yellow sapphire */
+  color: #1a237e; /* dark blue text */
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(244, 197, 66, 0.5);
+}
+
+button:hover {
+  background-color: #ffdb4d; /* brighter gold on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(244, 197, 66, 0.7);
+}

@@ -3,9 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== LOGIN WITH PI =====
   const loginButton = document.getElementById("loginButton");
+document.getElementById("welcome-login-btn").addEventListener("click", () => {
+    document.getElementById("loginButton").click();
+});
+
   if (loginButton) {
     console.log("Login button found");
     loginButton.addEventListener("click", async () => {
+if (welcomeLoginBtn) {
+    welcomeLoginBtn.addEventListener("click", () => loginButton.click());
+}
+
       console.log("Login button clicked");
       try {
         const scopes = ["username", "payments"];

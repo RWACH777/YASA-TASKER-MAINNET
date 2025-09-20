@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Yasa Tasker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="welcome-container">
+  <div class="welcome-content">
+    <img src="logo.png" alt="Yasa Tasker Logo" class="logo" />
+    <h1 class="app-title">Yasa TASKER</h1>
+    <button id="enterAppBtn" class="primary-btn">Login to Continue</button>
+  </div>
+
+  <script>
+    document.getElementById("enterAppBtn").addEventListener("click", function() {
+      // Redirect to your main app page (index.html)
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

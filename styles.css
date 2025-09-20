@@ -45,3 +45,48 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(244, 197, 66, 0.7);
 }
+/* ==== Welcome Page ==== */
+.welcome-container {
+  background: linear-gradient(135deg, #0f52ba 0%, #091f36 100%); /* sapphire blue */
+  color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.welcome-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  background-color: gold;
+  color: #091f36;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.primary-btn:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+

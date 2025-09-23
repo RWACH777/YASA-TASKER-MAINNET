@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---- LOGIN WITH PI ----
 const loginButton = document.getElementById("loginButton");
+const welcomeLoginBtn =document.getElementByld("welcomeLoginBtn");
 const welcomeLoginBtn = document.getElementById("welcomeLoginBtn"); // <— new button
 
 if (loginButton) {

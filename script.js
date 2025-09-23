@@ -1,32 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and script.js running");
 
-  // ===== LOGIN WITH PI =====
-  const loginButton = document.getElementById("loginButton");
-document.getElementById("welcome-login-btn").addEventListener("click", () => {
-    document.getElementById("loginButton").click();
-});
+  // ---- LOGIN WITH PI ----
+const loginButton = document.getElementById("loginButton");
+const welcomeLoginBtn = document.getElementById("welcomeLoginBtn"); // <— new button
 
-  if (loginButton) {
-    console.log("Login button found");
+if (loginButton) {
+    console.log("login button found");
     loginButton.addEventListener("click", async () => {
-if (welcomeLoginBtn) {
-    welcomeLoginBtn.addEventListener("click", () => loginButton.click());
+        console.log("Login button clicked");
+        try {
+            const scopes = ["username", "payments"];
+            const authResult = await Pi.authenticate(scopes, onIncompletePaymentFound);
+            alert(`Login successful: ${authResult.user.username}`);
+        } catch (err) {
+            console.error("Login failed", err);
+        }
+    });
+
+    // if the new WELCOME button exists, trigger the same click
+    if (welcomeLoginBtn) {
+        welcomeLoginBtn.addEventListener("click", () => loginButton.click());
+    }
+} else {
+    console.error("Login button NOT found");
 }
 
-      console.log("Login button clicked");
-      try {
-        const scopes = ["username", "payments"];
-        const authResult = await Pi.authenticate(scopes, onIncompletePaymentFound);
-        console.log("Login successful:", authResult);
-        alert(`Welcome ${authResult.user.username}`);
-      } catch (err) {
-        console.error("Login failed:", err);
-      }
-    });
-  } else {
-    console.error("Login button NOT found");
-  }
 
   // ===== PAY WITH PI =====
   const payButton = document.getElementById("payButton");
